@@ -1,0 +1,6 @@
+[submodule "json-tagger-api"]
+	path = json-tagger-api
+	url = git@github.com:matt-rule/json-tagger-api.git
+[submodule "json-tagger-react"]
+	path = json-tagger-react
+	url = git@github.com:matt-rule/json-tagger-react.git

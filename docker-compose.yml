@@ -1,0 +1,17 @@
+version: '3'
+services:
+  json-tagger-api:
+    build: ./json-tagger-api
+    ports:
+      - "5000:5000"
+      - "5001:5001"
+  json-tagger-react:
+    build: ./json-tagger-react
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+    ports:
+      - "3001:3000"
+    tty: true
+    volumes:
+      - ./json-tagger-react:/app
+      - /app/node_modules

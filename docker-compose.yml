@@ -5,6 +5,8 @@ services:
     ports:
       - "5000:5000"
       - "5001:5001"
+    volumes:
+      - "${JSONTAGGER_DATA_PATH}:/data"
   json-tagger-react:
     build: ./json-tagger-react
     environment:

@@ -11,7 +11,7 @@
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
             "program": "${workspaceFolder}/json-tagger-api/bin/Debug/netcoreapp3.0/json-tagger-api.dll",
-            "args": [],
+            "args": ["--urls", "http://*:5000;http://*:5001"],
             "cwd": "${workspaceFolder}/json-tagger-api",
             "stopAtEntry": false,
             // Enable launching a web browser when ASP.NET Core starts. For more information: https://aka.ms/VSCode-CS-LaunchJson-WebBrowser

@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"path": "json-tagger-api"
+		},
+		{
+			"path": "json-tagger-react"
+		}
+	],
+	"settings": {}
+}

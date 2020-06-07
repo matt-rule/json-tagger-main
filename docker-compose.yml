@@ -5,6 +5,11 @@ services:
     environment:
       - JSONTAGGER_DATA_PATH=/data
     ports:
+      # (Note that ports 80 and 443 are commonly associated with HTTP and HTTPS respectively.)
+      # "Kestrel listens on http://localhost:5000 and https://localhost:5001 (if a default cert is available)."
+      # Source: https://docs.microsoft.com/en-us/aspnet/core/fundamentals/servers/kestrel?view=aspnetcore-3.1
+      # This page ( https://docs.microsoft.com/en-us/aspnet/core/security/enforcing-ssl?view=aspnetcore-3.1&tabs=visual-studio )
+      # mentions 443/80 in production and 5001/5000 in development.
       - "5000:5000"
       - "5001:5001"
     volumes:
@@ -14,6 +19,7 @@ services:
     environment:
       - CHOKIDAR_USEPOLLING=true
     ports:
+      # Mapping 3001 to 3000 looks wrong.
       - "3001:3000"
     tty: true
     volumes:
